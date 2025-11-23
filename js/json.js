@@ -68,11 +68,35 @@ function showTopFlavors(jsonObj) {
         article.appendChild(h2);
         article.appendChild(img);
         article.appendChild(ul);
+        // Calories display
+const calP = document.createElement('p');
+const rawCalories = topFlavors[i].calories;
+const kcal = (typeof rawCalories === 'number') ? rawCalories : parseInt(rawCalories);
+if (Number.isFinite(kcal)) {
+    calP.textContent = `Calories: ${kcal} kcal `;
+    const level = calorieLevel(kcal);
+    const badge = document.createElement('span');
+    badge.textContent = level.toUpperCase();
+    badge.classList.add('badge', `badge--${level}`);
+    badge.setAttribute('aria-label', `Calorie level: ${level}`);
+    calP.appendChild(badge);
+} else {
+    calP.textContent = 'Calories: N/A';
+}
+article.appendChild(calP);
+
         // STEP 10i: Append each complete ARTICLE element to the SECTION element
         section.appendChild(article);
         
     };
 };
+function calorieLevel(kcal) {
+    if (typeof kcal !== 'number' || !Number.isFinite(kcal)) return 'unknown';
+    if (kcal <= 180) return 'low';
+    if (kcal <= 300) return 'medium';
+    return 'high';
+}
+
 // STEP 11: The instructor will edit the JSON file - refresh your page to see the updated content
 
 // STEP 12: Change the URL in STEP 3 to point to the JSON file in the local /js folder in order to prepare for today's lab
