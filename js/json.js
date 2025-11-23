@@ -57,7 +57,7 @@ function showTopFlavors(jsonObj) {
 
         // STEP 10g: Build a loop for the ingredients array in the JSON
         let ingredients = topFlavors[i].ingredients;
-        for(j =0;j<ingredients.length;ingredients++,j++){
+        for(let j =0;j<ingredients.length;ingredients,j++){
             // add the ingredient to the UL
             let listItem = document.createElement('li');
             listItem.textContent = ingredients[j];
@@ -68,6 +68,23 @@ function showTopFlavors(jsonObj) {
         article.appendChild(h2);
         article.appendChild(img);
         article.appendChild(ul);
+
+const typeP = document.createElement('p');
+const type = topFlavors[i].type 
+    ? String(topFlavors[i].type).toLowerCase() 
+    : 'unknown';
+
+const typeBadge = document.createElement('span');
+typeBadge.textContent = type.toUpperCase();
+typeBadge.classList.add(
+  'badge',
+  'badge--type',
+  `badge--type-${type.replace(/\s+/g, '-')}`
+);
+
+typeP.appendChild(typeBadge);
+article.appendChild(typeP);
+
         // Calories display
 const calP = document.createElement('p');
 const rawCalories = topFlavors[i].calories;
