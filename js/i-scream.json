@@ -25,6 +25,30 @@
         "clover honey"
       ],
       "image" : "peach-mango.svg"
+    },
+    {
+      "name": "Frost Bite Blast",
+      "calories": 420,
+      "type": "ice cream",
+      "ingredients": [
+        "vanilla bean cream",
+        "crystal sugar",
+        "arctic chocolate"
+      ],
+      "image": "ice-cream-xtra1.svg"
+    },
+    {
+      "name": "Polar Pineapple Punch",
+      "calories": 280,
+      "type": "sorbet",
+      "ingredients": [
+        "pineapple juice",
+        "lemon zest",
+        "mint ice"
+      ],
+      "image": "ice-cream-xtra2.svg"
     }
+
+
   ]
 }
