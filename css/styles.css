@@ -1,18 +1,20 @@
 @charset "utf-8";
 
 html {
-	box-sizing: border-box;
-  }
-*, *:before, *:after {
-	box-sizing: inherit;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
-	font-family: sans-serif;
-	font-size: 150%;
-	line-height: 1.4;
-	width: 80%;
-	margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 150%;
+  line-height: 1.4;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* header styles */
@@ -30,21 +32,21 @@ header p {
 
 /* section styles */
 section {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
 }
 section article {
-	border: 1px solid black;
-	box-shadow: 0 2px 14px grey;
-	padding: 2.5%;
-	width: 25%;
-	margin: 0 1%;
+  border: 1px solid black;
+  box-shadow: 0 2px 14px grey;
+  padding: 2.5%;
+  width: 25%;
+  margin: 0 1%;
 }
 article img {
-	display: block;
-	height: 150px;
-	width: 90px;
+  display: block;
+  height: 150px;
+  width: 90px;
 }
 section p {
   margin: 5px 0;
@@ -57,4 +59,29 @@ section ul {
 h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  border-radius: 0.4em;
+  font-size: 0.85em;
+  margin-left: 0.4em;
+}
+.badge--low {
+  background: #d0f0c0;
+}
+.badge--medium {
+  background: #fff2a8;
+}
+.badge--high {
+  background: #f7c6c6;
+}
+.badge--type {
+  background: #e0e7ff;
+  margin-left: 0;
+}
+.calories {
+  font-weight: 700;
+  margin-top: 0.4em;
 }
